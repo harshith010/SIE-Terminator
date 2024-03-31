@@ -1,11 +1,35 @@
 pipeline {
     agent any
     stages {
-        stage('init') {
+        stage('Build') {
             steps {
-                echo "Starting new Project"
-                echo "--------------------"
+                echo 'Building the project'
+                // Add build steps here (e.g., Maven, Gradle)
             }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests'
+                // Add test execution steps here
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the project'
+                // Add deployment steps here (e.g., Docker, Kubernetes)
+            }
+        }
+    }
+    post {
+        always {
+            echo 'Cleaning up'
+            // Add cleanup steps here
+        }
+        success {
+            echo 'Project deployment successful'
+        }
+        failure {
+            echo 'Project deployment failed'
         }
     }
 }
