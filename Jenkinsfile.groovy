@@ -10,6 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests'
+                app()
                 // Add test execution steps here
             }
         }
