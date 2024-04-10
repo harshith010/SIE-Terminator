@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests'
-                app()
+                hlpTrial.app()
                 // Add test execution steps here
             }
         }
