@@ -1,4 +1,4 @@
-import hlpTrial
+import newApp
 pipeline {
     agent any
     stages {
@@ -11,7 +11,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests'
-                hlpTrial.newApp()
+                newApp = new newApp()
+                newApp.call()
                 // Add test execution steps here
             }
         }
