@@ -1,3 +1,4 @@
+import hlpTrial
 pipeline {
     agent any
     stages {
