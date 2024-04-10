@@ -13,8 +13,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests'
-                newApp = new newApp()
-                newApp.call()
+                def newAppInstance = new newApp()
+                newAppInstance.call()
                 // Add test execution steps here
             }
         }
